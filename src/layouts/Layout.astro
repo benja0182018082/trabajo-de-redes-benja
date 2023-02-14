@@ -1,0 +1,213 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<div class="barra"><img src="" alt="" /></div>
+				<nav id="navlab">
+					<div class="logo">
+						<img
+							src="/ah-removebg-preview.png"
+							alt="logo"
+							class="logo"
+						/>
+					</div>
+					<div id="burger">
+						<button class="relative group">
+							<div
+								class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md"
+							>
+								<div
+									class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden group-focus:-translate-y-1.5 group-focus:-rotate-90"
+								>
+									<div
+										class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg] group-focus:w-2/3 delay-150"
+									>
+									</div>
+									<div
+										class="bg-white h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10"
+									>
+									</div>
+									<div
+										class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg] group-focus:w-2/3 delay-150"
+									>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+					<body>
+						<ul id="menu">
+							<li>
+								<img
+									src="/coin-flip-59.gif"
+									alt="GIF animado"
+									class="gif1"
+									width="100px"
+									height="1px"
+								/>
+							</li>
+							<li></li>
+							<li>
+								<a href="https://qy9tmv-3000.csb.app/"
+									><img
+										src="/Sin_título-removebg-preview.png"
+										height="50px"
+										width="100px"
+									/></a
+								>
+							</li>
+							<li>
+								<a href="#">
+									<img
+										src="/acerca_de-removebg-preview.png"
+										height="50px"
+										width="100px"
+									/>
+								</a>
+							</li>
+							<li>
+								<a href="https://linktr.ee/b.x.b"
+									><img
+										src="/contactos-removebg-preview.png"
+										height="50px"
+										width="100px"
+									/></a
+								>
+							</li>
+							<li>
+								<img
+									src="/coin-flip-59.gif"
+									alt="GIF animado"
+									class="gif1"
+									width="100px"
+									height="1px"
+								/>
+							</li>
+						</ul>
+					</body>
+				</nav>
+			</div>
+		</header>
+		<h1>Red Zone</h1>
+		<h3>by b.s.b.</h3>
+		<h6>
+			La saga de Five Nights at Freddy's (FNAF) es una popular serie de
+			videojuegos de terror desarrollada por Scott Cawthon. La historia de
+			FNAF se desarrolla en torno a una cadena de restaurantes temáticos
+			llamados "Freddy Fazbear's Pizza" y presenta una premisa intrigante
+			y aterradora. El primer juego de la saga, lanzado en 2014, presenta
+			al jugador como un guardia de seguridad nocturno en uno de los
+			restaurantes de Freddy Fazbear. El objetivo es sobrevivir cinco
+			noches mientras se monitorean las cámaras de seguridad para evitar
+			ser atacado por los animatrónicos animados durante la noche. Con el
+			tiempo, se revela que los animatrónicos tienen un comportamiento
+			inusual y siniestro. A medida que la saga avanza, se desvela una
+			compleja trama que involucra eventos sobrenaturales y misteriosos.
+			Se descubre que los animatrónicos están poseídos por las almas de
+			niños fallecidos, quienes buscan venganza contra el propietario de
+			la cadena de restaurantes por negligencia y abuso.
+		</h6>
+		<div class="logo3">
+			<a
+				href="https://lab-redes-benja.vercel.app/"
+				style="display: inline-block;"
+			>
+				<img
+					src="/descarga-removebg-preview.png"
+					style="width: 50px;"
+				/>
+			</a>
+		</div>
+	</body>
+	<slot />
+
+	<style>
+		#gif {
+			width: 20px;
+			height: 100px;
+		}
+		.burger {
+			display: none;
+		}
+		body {
+			/* esto es la parte del fondo de la pagina*/
+			background-image: url(/96088567-fondo-borroso-violeta-abstracto-color-de-textura-suave-degradado-ilustración-vectorial-patrón-de.webp);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 100vh;
+			/*asta aca termina*/
+		}
+		.logo {
+			width: 100px;
+			height: auto;
+		}
+		#navlab {
+			display: flex;
+			flex-wrap: wrap; /*ayuda a desplasar columnas*/
+			justify-content: space-between;
+			margin: 20px;
+		}
+		#menu {
+			display: none;
+			width: 100%;
+		}
+
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.menu ul li {
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		.menu ul li a {
+			text-decoration: none;
+			color: #333;
+			padding: 5px 10px;
+		}
+		@media (min-width: 768px) {
+			#menu {
+				display: flex;
+				width: auto;
+			}
+			#burger {
+				display: none;
+			}
+			#navlinks {
+				display: flex;
+				gap: 20px;
+			}
+		}
+	</style>
+	<script is:inline>
+		const burger = document.getElementById("burger");
+		function burguerclick() {
+			const menu = document.getElementById("menu");
+			if (menu.style.display === "none") {
+				menu.style.display = "flex";
+			} else {
+				menu.style.display = "none";
+			}
+		}
+		burger.addEventListener("click", burguerclick);
+	</script>
+</html>
